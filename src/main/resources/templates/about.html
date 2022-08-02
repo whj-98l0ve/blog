@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <title>关于我</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+</head>
+
+<body>
+<!--导航-->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small ">
+    <div class="ui container">
+        <!--        stackable 可堆叠-->
+        <div class="ui inverted secondary stackable menu">
+            <h2 class="ui teal header item">About Me</h2>
+            <a href="#" th:href="@{/}" class="item m-item m-mobile-hide "><i class="small home icon"></i> 首页</a>
+            <a href="#" th:href="@{/types/-1}" class="item m-item m-mobile-hide "><i class="small idea icon"></i> 分类</a>
+            <a href="#" th:href="@{/tags/-1}" class="item m-item m-mobile-hide "><i class="small tags icon"></i> 标签</a>
+            <a href="#" th:href="@{/archives}" class="item m-item m-mobile-hide "><i class="small clone icon"></i> 归档</a>
+            <a href="#" th:href="@{/about}" class="active item m-item m-mobile-hide "><i class="small active info icon"></i> 关于我</a>
+            <div class="right item m-mobile-hide ">
+                <form name="search" action="#" method="post" th:action="@{/search}" target="_blank">
+                    <div class="ui icon inverted transparent input m-margin-tb-tiny">
+                        <input type="text" name="query" placeholder="Search...">
+                        <!--                            给控件icon设置onclick提交search的表单，里面的数据应该叫query给后台-->
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+
+</nav>
+<!--中间内容-->
+<div class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+        <div class="ui stackable  grid">
+            <div class="eleven wide column">
+                <div class="ui segment">
+                    <img src="" th:src="@{/images/avatar.jpg}" alt="" class="ui rounded image">
+                </div>
+
+            </div>
+
+            <div class="five wide column">
+                <div class="ui top attached segment">
+                    <div class="ui header">关于我</div>
+                </div>
+                <div class="ui attached segment">
+                    <p class="m-text">王海疆 </p>
+                    <p class="m-text">love live life </p>
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui orange basic label m-margin-tb-tiny">电影</div>
+                    <div class="ui orange basic label m-margin-tb-tiny">动漫</div>
+                    <div class="ui orange basic label m-margin-tb-tiny">宅</div>
+                    <div class="ui orange basic label m-margin-tb-tiny">游戏</div>
+                    <div class="ui orange basic label m-margin-tb-tiny">...</div>
+
+
+
+                </div>
+                <div class="ui attached segment">
+                    <div class="ui teal basic label m-margin-tb-tiny ">JAVA</div>
+                    <div class="ui teal basic label m-margin-tb-tiny">SpringBoot</div>
+                    <div class="ui teal basic label m-margin-tb-tiny">Jpa</div>
+                    <div class="ui teal basic label m-margin-tb-tiny">...</div>
+                </div>
+                <div class="ui bottom attached segment">
+                    <a href="#" class="ui circular qq icon button" data-content="635111721" data-position="bottom center" ><i class="qq icon"></i></a>
+                    <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
+                    <a href="#" class="ui circular icon button" ><i class="github icon"></i></a>
+                </div>
+                <div class="ui wechat-qr flowing popup transition hidden">
+                    <img src="../static/images/wechat.png" th:src="@{/images/wechat.png}" alt="" class="ui rounded image" style="width: 120px">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<!--底部footer-->
+<footer class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+
+        <div class="m-text-thin m-text-spaced m-opacity-tiny">@2021 By Whj</div>
+        <a href="https://beian.miit.gov.cn/" class="m-text-thin m-text-spaced m-opacity-tiny" >备案号&#60; &lt;沪ICP备19045592号&#62; &gt;</a>
+    </div>
+
+
+</footer>
+
+<th:block th:replace="_fragments :: script">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+
+
+
+
+    <script src="../static/lib/prism/prism.js"> </script>
+    <script src="../static/lib/qrcode/qrcode.js"></script>
+    <script src="../static/lib/waypoints/jquery.waypoints.js"></script>
+
+</th:block>
+
+<script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    })
+    $('.qq').popup()
+    $('.wechat').popup({
+        popup: $('.wechat-qr'),
+        position: 'bottom center'
+    })
+</script>
+
+
+</body>
+
+</html>

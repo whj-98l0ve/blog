@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <title>归档</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+</head>
+
+<body>
+<!--导航-->
+<nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small ">
+    <div class="ui container">
+        <!--        stackable 可堆叠-->
+        <div class="ui inverted secondary stackable menu">
+<!--            艹了原来是这里 stackable属性-->
+            <h2 class="ui teal header item">Archives</h2>
+            <a href="#" th:href="@{/}" class="item m-item m-mobile-hide "><i class="small home icon" ></i>首页</a>
+            <a href="#" th:href="@{/types/-1}" class="item m-item m-mobile-hide "><i class="small idea icon"></i>分类</a>
+            <a href="#" th:href="@{/tags/-1}" class="item m-item m-mobile-hide "><i class="small tags icon"></i>标签</a>
+            <a href="#" th:href="@{/archives}" class="active  item m-item m-mobile-hide "><i class="small clone icon"></i> 归档</a>
+            <a href="#" th:href="@{/about}" class="item m-item m-mobile-hide "><i class="small info icon"></i> 关于我</a>
+            <div class="right item m-mobile-hide ">
+                <form name="search" action="#" method="post" th:action="@{/search}" target="_blank">
+                    <div class="ui icon inverted transparent input m-margin-tb-tiny">
+                        <input type="text" name="query" placeholder="Search...">
+                        <!--                            给控件icon设置onclick提交search的表单，里面的数据应该叫query给后台-->
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+
+</nav>
+<!--中间内容-->
+<div class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+        <!--        header头部-->
+        <div class="ui top attached padded segment">
+            <div class="ui middle aligned two column grid">
+                <div class="column">
+                    <h3 class="ui teal header">归档</h3>
+                </div>
+                <div class="right aligned column">
+                    共 <h2 class="ui teal header m-inline-block m-text-thin" th:text="${blogCount}">14</h2> 篇博客
+                </div>
+            </div>
+        </div>
+
+<!--        这是thymeleaf模板的专属循环模式-->
+<!--        thymeleaf自己定义的一个标签不会破坏原有的属性-->
+        <th:block th:each="item : ${archiveMap}">
+<!--            item 中有两个属性一个key一个value，所以取值取得是key-->
+        <h3 class="ui center aligned teal header" th:text="${item.key}">2017</h3>
+        <!--        vertical 垂直-->
+        <div class="ui fluid vertical menu">
+<!--                   从value里面获取blog循环-->
+            <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item" th:each="blog : ${item.value}">
+                  <span>
+                      <i class="mini teal circle icon"></i><span style="margin-left: 5px!important;" th:text="${blog.title}">111</span>
+                      <div class="ui teal mini tag label " th:text="${#dates.format(blog.updateTime,'MMMdd')}">9月03日</div>
+                  </span>
+<!--                m-padded-mini   style="margin-top: 3px!important;"  -->
+                <div class="ui teal large label  " style="margin-top: 1px!important;" th:text="${blog.flag}">原创</div>
+            </a>
+
+
+        </div>
+
+        </th:block>
+
+
+
+
+    </div>
+</div>
+<br>
+<br>
+
+<!--底部footer-->
+<footer class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+
+
+        <div class="m-text-thin m-text-spaced m-opacity-tiny">@2021 By Whj</div>
+        <a href="https://beian.miit.gov.cn/" class="m-text-thin m-text-spaced m-opacity-tiny" >备案号&#60; &lt;沪ICP备19045592号&#62; &gt;</a>
+    </div>
+
+
+</footer>
+
+<th:block th:replace="_fragments :: script">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+
+
+
+
+    <script src="../static/lib/prism/prism.js"> </script>
+    <script src="../static/lib/qrcode/qrcode.js"></script>
+    <script src="../static/lib/waypoints/jquery.waypoints.js"></script>
+
+</th:block>
+<script>
+    $('.menu.toggle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    })
+
+
+</script>
+
+
+</body>
+
+</html>

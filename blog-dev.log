@@ -1,0 +1,145 @@
+2021-09-09 09:47:15.414  INFO 1404 --- [restartedMain] com.whj.blog.BlogApplication             : Starting BlogApplication using Java 11.0.10 on PC-20181205MSFP with PID 1404 (E:\blog\target\classes started by Administrator in E:\blog)
+2021-09-09 09:47:15.424  INFO 1404 --- [restartedMain] com.whj.blog.BlogApplication             : The following profiles are active: dev
+2021-09-09 09:47:15.668  INFO 1404 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-09 09:47:15.668  INFO 1404 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-09 09:47:17.656  INFO 1404 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-09 09:47:17.806  INFO 1404 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 4 JPA repository interfaces.
+2021-09-09 09:47:19.026  INFO 1404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7777 (http)
+2021-09-09 09:47:19.102  INFO 1404 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-09 09:47:19.102  INFO 1404 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-09-09 09:47:19.304  INFO 1404 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-09 09:47:19.304  INFO 1404 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3620 ms
+2021-09-09 09:47:19.627  INFO 1404 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-09 09:47:19.738  INFO 1404 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-09-09 09:47:20.012  INFO 1404 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-09 09:47:20.157  INFO 1404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-09-09 09:47:20.771  INFO 1404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-09-09 09:47:20.805  INFO 1404 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-09 09:47:24.682  INFO 1404 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-09 09:47:24.706  INFO 1404 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-09 09:47:24.796  INFO 1404 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-09 09:47:26.413  INFO 1404 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-09 09:47:26.592  INFO 1404 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-09 09:47:27.542  INFO 1404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7777 (http) with context path ''
+2021-09-09 09:47:27.625  INFO 1404 --- [restartedMain] com.whj.blog.BlogApplication             : Started BlogApplication in 13.176 seconds (JVM running for 15.652)
+2021-09-09 09:47:40.115  INFO 1404 --- [http-nio-7777-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-09 09:47:40.116  INFO 1404 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-09 09:47:40.117  INFO 1404 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-09-09 09:47:40.152  INFO 1404 --- [http-nio-7777-exec-1] com.whj.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:7777/', ip='0:0:0:0:0:0:0:1', classMethod='class com.whj.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2021-09-09 09:47:40.306  WARN 1404 --- [http-nio-7777-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-09-09 09:47:40.376  WARN 1404 --- [http-nio-7777-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-09-09 09:47:40.434  INFO 1404 --- [http-nio-7777-exec-1] com.whj.blog.aspect.LogAspect            : Result : index
+2021-09-09 09:47:45.143  WARN 1404 --- [http-nio-7777-exec-6] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [456] milliseconds.
+2021-09-09 09:51:30.479  INFO 6396 --- [restartedMain] com.whj.blog.BlogApplication             : Starting BlogApplication using Java 11.0.10 on PC-20181205MSFP with PID 6396 (E:\blog\target\classes started by Administrator in E:\blog)
+2021-09-09 09:51:30.482  INFO 6396 --- [restartedMain] com.whj.blog.BlogApplication             : The following profiles are active: dev
+2021-09-09 09:51:30.554  INFO 6396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-09 09:51:30.554  INFO 6396 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-09 09:51:31.424  INFO 6396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-09 09:51:31.523  INFO 6396 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 4 JPA repository interfaces.
+2021-09-09 09:51:32.386  INFO 6396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7777 (http)
+2021-09-09 09:51:32.397  INFO 6396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-09 09:51:32.398  INFO 6396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-09-09 09:51:32.533  INFO 6396 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-09 09:51:32.534  INFO 6396 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1979 ms
+2021-09-09 09:51:32.749  INFO 6396 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-09 09:51:32.795  INFO 6396 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-09-09 09:51:32.915  INFO 6396 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-09 09:51:33.019  INFO 6396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-09-09 09:51:33.366  INFO 6396 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-09-09 09:51:33.386  INFO 6396 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-09 09:51:34.245  INFO 6396 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-09 09:51:34.255  INFO 6396 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-09 09:51:34.357  INFO 6396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-09 09:51:35.671  INFO 6396 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-09 09:51:35.829  INFO 6396 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-09 09:51:36.496  INFO 6396 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7777 (http) with context path ''
+2021-09-09 09:51:36.511  INFO 6396 --- [restartedMain] com.whj.blog.BlogApplication             : Started BlogApplication in 6.646 seconds (JVM running for 8.284)
+2021-09-09 09:51:44.434  INFO 6396 --- [http-nio-7777-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-09 09:51:44.435  INFO 6396 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-09 09:51:44.436  INFO 6396 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-09-09 09:51:44.909  WARN 6396 --- [http-nio-7777-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [456] milliseconds.
+2021-09-09 09:53:48.366  INFO 1372 --- [restartedMain] com.whj.blog.BlogApplication             : Starting BlogApplication using Java 11.0.10 on PC-20181205MSFP with PID 1372 (E:\blog\target\classes started by Administrator in E:\blog)
+2021-09-09 09:53:48.370  INFO 1372 --- [restartedMain] com.whj.blog.BlogApplication             : The following profiles are active: dev
+2021-09-09 09:53:48.436  INFO 1372 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-09 09:53:48.437  INFO 1372 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-09 09:53:49.285  INFO 1372 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-09 09:53:49.388  INFO 1372 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 4 JPA repository interfaces.
+2021-09-09 09:53:50.243  INFO 1372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7777 (http)
+2021-09-09 09:53:50.253  INFO 1372 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-09 09:53:50.254  INFO 1372 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-09-09 09:53:50.393  INFO 1372 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-09 09:53:50.393  INFO 1372 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1954 ms
+2021-09-09 09:53:50.612  INFO 1372 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-09 09:53:50.658  INFO 1372 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-09-09 09:53:50.781  INFO 1372 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-09 09:53:50.886  INFO 1372 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-09-09 09:53:51.259  INFO 1372 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-09-09 09:53:51.281  INFO 1372 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-09 09:53:52.219  INFO 1372 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-09 09:53:52.229  INFO 1372 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-09 09:53:52.323  INFO 1372 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-09 09:53:53.692  INFO 1372 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-09 09:53:53.834  INFO 1372 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-09 09:53:54.480  INFO 1372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7777 (http) with context path ''
+2021-09-09 09:53:54.492  INFO 1372 --- [restartedMain] com.whj.blog.BlogApplication             : Started BlogApplication in 6.823 seconds (JVM running for 8.726)
+2021-09-09 09:54:19.862  INFO 1372 --- [http-nio-7777-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-09 09:54:19.863  INFO 1372 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-09 09:54:19.865  INFO 1372 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-09-09 09:54:19.905  INFO 1372 --- [http-nio-7777-exec-1] com.whj.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:7777/', ip='0:0:0:0:0:0:0:1', classMethod='class com.whj.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2021-09-09 09:54:20.059  WARN 1372 --- [http-nio-7777-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-09-09 09:54:20.130  WARN 1372 --- [http-nio-7777-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-09-09 09:54:20.183  INFO 1372 --- [http-nio-7777-exec-1] com.whj.blog.aspect.LogAspect            : Result : index
+2021-09-09 09:54:48.137  WARN 1372 --- [http-nio-7777-exec-10] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [462] milliseconds.
+2021-09-09 09:55:19.286  INFO 1372 --- [http-nio-7777-exec-5] com.whj.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:7777/', ip='0:0:0:0:0:0:0:1', classMethod='class com.whj.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2021-09-09 09:55:19.383  INFO 1372 --- [http-nio-7777-exec-5] com.whj.blog.aspect.LogAspect            : Result : index
+2021-09-09 10:20:59.821  INFO 1372 --- [http-nio-7777-exec-7] com.whj.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:7777/', ip='0:0:0:0:0:0:0:1', classMethod='class com.whj.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2021-09-09 10:20:59.923  INFO 1372 --- [http-nio-7777-exec-7] com.whj.blog.aspect.LogAspect            : Result : index
+2021-09-09 10:21:08.510  INFO 1372 --- [http-nio-7777-exec-3] com.whj.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:7777/about', ip='0:0:0:0:0:0:0:1', classMethod='class com.whj.blog.web.AboutShowController.about', args=[]}
+2021-09-09 10:21:08.516  INFO 1372 --- [http-nio-7777-exec-3] com.whj.blog.aspect.LogAspect            : Result : about
+2021-09-09 10:23:45.634  INFO 8376 --- [restartedMain] com.whj.blog.BlogApplication             : Starting BlogApplication using Java 11.0.10 on PC-20181205MSFP with PID 8376 (E:\blog\target\classes started by Administrator in E:\blog)
+2021-09-09 10:23:45.638  INFO 8376 --- [restartedMain] com.whj.blog.BlogApplication             : The following profiles are active: dev
+2021-09-09 10:23:45.716  INFO 8376 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-09-09 10:23:45.716  INFO 8376 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-09-09 10:23:46.661  INFO 8376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-09 10:23:46.764  INFO 8376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 4 JPA repository interfaces.
+2021-09-09 10:23:47.644  INFO 8376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7777 (http)
+2021-09-09 10:23:47.655  INFO 8376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-09 10:23:47.656  INFO 8376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-09-09 10:23:47.808  INFO 8376 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-09 10:23:47.809  INFO 8376 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2091 ms
+2021-09-09 10:23:48.061  INFO 8376 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-09 10:23:48.106  INFO 8376 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.29.Final
+2021-09-09 10:23:48.219  INFO 8376 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-09 10:23:48.324  INFO 8376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-09-09 10:23:48.713  INFO 8376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-09-09 10:23:48.734  INFO 8376 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-09-09 10:23:49.626  INFO 8376 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-09 10:23:49.636  INFO 8376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-09 10:23:49.730  INFO 8376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-09-09 10:23:51.064  INFO 8376 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-09-09 10:23:51.213  INFO 8376 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-09-09 10:23:51.882  INFO 8376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7777 (http) with context path ''
+2021-09-09 10:23:51.895  INFO 8376 --- [restartedMain] com.whj.blog.BlogApplication             : Started BlogApplication in 6.877 seconds (JVM running for 8.632)
+2021-09-09 10:24:01.785  INFO 8376 --- [http-nio-7777-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-09 10:24:01.786  INFO 8376 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-09 10:24:01.788  INFO 8376 --- [http-nio-7777-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-09-09 10:24:01.816  INFO 8376 --- [http-nio-7777-exec-1] com.whj.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:7777/about', ip='0:0:0:0:0:0:0:1', classMethod='class com.whj.blog.web.AboutShowController.about', args=[]}
+2021-09-09 10:24:01.840  INFO 8376 --- [http-nio-7777-exec-1] com.whj.blog.aspect.LogAspect            : Result : about
+2021-09-09 10:24:07.064  INFO 8376 --- [http-nio-7777-exec-4] com.whj.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:7777/', ip='0:0:0:0:0:0:0:1', classMethod='class com.whj.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2021-09-09 10:24:07.236  WARN 8376 --- [http-nio-7777-exec-4] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-09-09 10:24:07.308  WARN 8376 --- [http-nio-7777-exec-4] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2021-09-09 10:24:07.362  INFO 8376 --- [http-nio-7777-exec-4] com.whj.blog.aspect.LogAspect            : Result : index
+2021-09-09 10:24:10.815  INFO 8376 --- [http-nio-7777-exec-5] com.whj.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:7777/types/-1', ip='0:0:0:0:0:0:0:1', classMethod='class com.whj.blog.web.TypeShowController.types', args=[-1, Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2021-09-09 10:24:10.915  INFO 8376 --- [http-nio-7777-exec-5] com.whj.blog.aspect.LogAspect            : Result : types
+2021-09-09 10:24:11.939  INFO 8376 --- [http-nio-7777-exec-5] com.whj.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:7777/tags/-1', ip='0:0:0:0:0:0:0:1', classMethod='class com.whj.blog.web.TagShowController.Tags', args=[-1, Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2021-09-09 10:24:12.033  INFO 8376 --- [http-nio-7777-exec-5] com.whj.blog.aspect.LogAspect            : Result : tags
+2021-09-09 10:24:13.104  INFO 8376 --- [http-nio-7777-exec-5] com.whj.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:7777/archives', ip='0:0:0:0:0:0:0:1', classMethod='class com.whj.blog.web.ArchiveShowController.archives', args=[{}]}
+2021-09-09 10:24:13.146  INFO 8376 --- [http-nio-7777-exec-5] com.whj.blog.aspect.LogAspect            : Result : archives
+2021-09-09 10:24:13.987  INFO 8376 --- [http-nio-7777-exec-3] com.whj.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:7777/about', ip='0:0:0:0:0:0:0:1', classMethod='class com.whj.blog.web.AboutShowController.about', args=[]}
+2021-09-09 10:24:13.987  INFO 8376 --- [http-nio-7777-exec-3] com.whj.blog.aspect.LogAspect            : Result : about
+2021-09-09 10:24:14.953  INFO 8376 --- [http-nio-7777-exec-5] com.whj.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:7777/archives', ip='0:0:0:0:0:0:0:1', classMethod='class com.whj.blog.web.ArchiveShowController.archives', args=[{}]}
+2021-09-09 10:24:14.981  INFO 8376 --- [http-nio-7777-exec-5] com.whj.blog.aspect.LogAspect            : Result : archives
+2021-09-09 10:27:16.908  INFO 8376 --- [http-nio-7777-exec-10] com.whj.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:7777/', ip='0:0:0:0:0:0:0:1', classMethod='class com.whj.blog.web.IndexController.index', args=[Page request [number: 0, size 8, sort: updateTime: DESC], {}]}
+2021-09-09 10:27:16.997  INFO 8376 --- [http-nio-7777-exec-10] com.whj.blog.aspect.LogAspect            : Result : index
+2021-09-09 10:27:19.911  INFO 8376 --- [http-nio-7777-exec-2] com.whj.blog.aspect.LogAspect            : Request : RequestLog{url='http://localhost:7777/blog/18', ip='0:0:0:0:0:0:0:1', classMethod='class com.whj.blog.web.IndexController.blog', args=[18, {}]}
+2021-09-09 10:27:20.226  INFO 8376 --- [http-nio-7777-exec-2] com.whj.blog.aspect.LogAspect            : Result : blog
